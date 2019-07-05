@@ -5,8 +5,12 @@
   "main": "my-element.js",
   "module": "my-element.js",
   "scripts": {
-    "start": "polymer serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "polymer serve ./src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copyindex": "cp src/index.html build",
+    "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles build && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js build",
+    "build": "rm -rf build && mkdir build && npm run copyindex && npm run copywc && rollup -c",
+    "start:build": "serve build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +28,16 @@
   },
   "homepage": "https://github.com/jeiker26/lit-element#readme",
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.10",
     "lit-element": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "rollup": "^1.16.6",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "serve": "^11.0.2",
+    "@webcomponents/webcomponentsjs": "^2.2.10"
   }
 }
