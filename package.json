@@ -1,0 +1,30 @@
+{
+  "name": "simple-webcomponent",
+  "version": "1.0.0",
+  "description": "Webcomponent with lit-element",
+  "main": "my-element.js",
+  "module": "my-element.js",
+  "scripts": {
+    "start": "polymer serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeiker26/lit-element.git"
+  },
+  "keywords": [
+    "webcomponent",
+    "lit-element",
+    "polymer"
+  ],
+  "author": "Jesus Javega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeiker26/lit-element/issues"
+  },
+  "homepage": "https://github.com/jeiker26/lit-element#readme",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "lit-element": "^2.2.0"
+  }
+}
